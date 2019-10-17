@@ -22,7 +22,14 @@ class Student
       SQL
       
     DB[:conn].execute(sql)
-
+  end 
+  
+  def self.drop_table
+    sql = <<-SQL 
+      REMOVE TABLE students
+      SQL
+    
+    DB[:conn].execute(sql)
   end 
   
 end
